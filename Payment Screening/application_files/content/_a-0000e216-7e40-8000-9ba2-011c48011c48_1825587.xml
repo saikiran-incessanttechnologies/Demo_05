@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e216-7e40-8000-9ba2-011c48011c48_1825819</versionUuid>
+    <rule>
+        <name>testForm</name>
+        <uuid>_a-0000e216-7e40-8000-9ba2-011c48011c48_1825587</uuid>
+        <description>test</description>
+        <parentUuid>_a-0000e216-7e40-8000-9ba2-011c48011c48_1825582</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Form",
+  contents: {
+    #"SYSTEM_SYSRULES_integerField"(
+      label: "Integer",
+      labelPosition: "ABOVE",
+      value: ri!TEST_MAIN.site_id,
+      saveInto: ri!TEST_MAIN.site_id,
+      refreshAfter: "UNFOCUS",
+      validations: {}
+    ),
+    #"SYSTEM_SYSRULES_integerField"(
+      label: "Integer",
+      labelPosition: "ABOVE",
+      value:ri!TEST_MAIN.test_id,
+      saveInto: ri!TEST_MAIN.test_id,
+      refreshAfter: "UNFOCUS",
+      validations: {}
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>TEST_MAIN</name>
+            <type>
+                <name>TEST_MAIN</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>TEST_CHILD</name>
+            <type>
+                <name>TEST_CHILD</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e216-7e40-8000-9ba2-011c48011c48_1825819"/>
+    </history>
+</contentHaul>
